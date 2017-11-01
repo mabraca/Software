@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Avanzomentro</title>
+
+    <!-- Bootstrap -->
+    {% load staticfiles %}
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+ <body>
+ 		
+			<h1>Welcome to Django Store</h1>
+			{% if user.username %}
+			<p>Welcome {{ user.username }}!
+			Here you can show your content!</p><br/>
+			<a href="logout">logout</a>
+			{% else %}
+			<p>Welcome anonymous user!
+			You need to <a href="/login/">login</a></p>
+			{% endif %}
+		</div>
+	</body>
+</html>
