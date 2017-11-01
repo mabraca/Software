@@ -23,7 +23,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', v.main_page),
     #url(r'^user/(\w+)/$', user_page),
-    url(r'^login/$', views.login),
+    url(r'^login/$', views.login, name='register'),
     url(r'^logout/$', v.logout_page),
     url(r'^register/$', v.register_page),
 ]
