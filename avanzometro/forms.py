@@ -1,13 +1,18 @@
-from django import forms 
-import re
-from django.contrib.auth.models import User
-from django.core.exceptions import ObjectDoesNotExist
-from django.utils.translation import ugettext_lazy as _
-from avanzometro.models import UserProfile
-
-class UserForm(forms.ModelForm):
-    password = forms.CharField(widget=forms.PasswordInput())
-
-    class Meta:
-        model = User
-        fields = ('username', 'email', 'password')
+from django import forms
+class UserRegistrationForm(forms.Form):
+    username = forms.CharField(
+        required = True,
+        label = 'Username',
+        max_length = 32
+    )
+    email = forms.CharField(
+        required = True,
+        label = 'Email',
+        max_length = 32,
+    )
+    password = forms.CharField(
+        required = True,
+        label = 'Password',
+        max_length = 32,
+        widget = forms.PasswordInput()
+    )

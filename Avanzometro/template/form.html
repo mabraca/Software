@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+<head>
+	<title>Bienvenido </title>
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	{% load static %}
+    <link rel="stylesheet" href="{% static 'css/form.css' %}"> 
+</head>
+
+	<div class="row">
+		<div class="col-sm-3"></div>
+
+		<div id="columnaMedio" class="col-sm-6">
+			<div class="row"></div>
+			<div id="cuadrado" class="row">
+				<p id="mensaje">
+					<b>Ingresa los datos para visualizar la gráfica</b>
+				</p>
+
+				<form id="datosUsuario">
+
+					<div class="form-group">
+						<label for="numericInput2">Cohorte:</label>
+						<br>
+						<input id="numericInput2" class="form-control" type="number" name="quantity" min="1967" max="2017">
+					</div>
+
+					<div class="form-group">
+						<label for="dropdown">Trimestre:</label>
+						<select class="form-control" id="dropdown">
+				        <option selected>Enero-Marzo</option>
+				        <option>Abril-Julio</option>
+				        <option>Intensivo</option>
+				        <option>Septiembre-Diciembre</option>
+				      </select>
+					</div>
+
+					<div class="form-group">
+						<label for="numericInput1">Año:</label>
+						<br>
+						<input id="numericInput1" class="form-control" type="number" name="quantity" min="1967" max="2017">
+					</div>
+			</div>
+
+			<div class="row">
+				<div id="boton" class="form-group text-center">
+						<button type="submit" class="btn btn-default">Enviar</button> 
+				</div>
+			</div>
+
+			</form>
+		</div>
+
+		<div class="col-sm-3"></div>
+	</div>
+</div>
+{% endblock %}
