@@ -86,8 +86,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'avanzometro',
-        'USER': 'software',
-        'PASSWORD': '123456',
+        'USER': 'avanzometro',
+        'PASSWORD': 'avanzometro',
         'HOST': '127.0.0.1',
         'PORT': '',
         'TEST': {

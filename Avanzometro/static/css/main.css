@@ -32,9 +32,7 @@
 		.panel-login {
 			margin-top: 50px;
 		   border: none;
-		  -webkit-box-shadow: 0px 0px 49px 14px rgba(188,190,194,0.39);
-		  -moz-box-shadow: 0px 0px 49px 14px rgba(188,190,194,0.39);
-		  box-shadow: 0px 0px 49px 14px rgba(188,190,194,0.39);
+		   background-color: #d2d6de;
 		  }
 		.panel-login .checkbox input[type=checkbox]{
 		  margin-left: 0px;
@@ -85,8 +83,9 @@
 		  outline-offset: -2px;
 		}
 		.panel-login .checkbox input[type="checkbox"]:checked + label::after {
-		  font-family: 'FontAwesome';
-		  content: "\f00c";
+		  font-family: 'Arial';
+		  content: "X";
+		  font-size: 14px;
 		}
 		.panel-login>.panel-heading .tabs{
 		  padding: 0;
@@ -117,7 +116,7 @@
 		}
 		.panel-login>.panel-heading .register {
 		  padding: 20px 30px;
-		  background: #2d3b55;
+		  background: #333;
 		  border-bottom-right-radius: 5px;
 		}
 		.panel-login>.panel-heading a{
@@ -163,20 +162,20 @@
 		.btn-login {
 		  background-color: #E8E9EC;
 		  outline: none;
-		  color: #2D3B55;
+		  color: #333;
 		  font-size: 14px;
 		  height: auto;
 		  font-weight: normal;
 		  padding: 14px 0;
 		  text-transform: uppercase;
 		  border: none;
-		  border-radius: 0px;
+		  border-radius: 5px;
 		  box-shadow: none;
 		}
 		.btn-login:hover,
 		.btn-login:focus {
 		  color: #fff;
-		  background-color: #2D3B55;
+		  background-color: #333;
 		}
 		.forgot-password {
 		  text-decoration: underline;
@@ -191,7 +190,7 @@
 		.btn-register {
 		  background-color: #E8E9EC;
 		  outline: none;
-		  color: #2D3B55;
+		  color: #333;
 		  font-size: 14px;
 		  height: auto;
 		  font-weight: normal;
@@ -204,7 +203,7 @@
 		.btn-register:hover,
 		.btn-register:focus {
 		  color: #fff;
-		  background-color: #2D3B55;
+		  background-color: #333;
 		}
 		#id_username, #id_password{
 			width: 350px;

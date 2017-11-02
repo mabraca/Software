@@ -4,8 +4,6 @@ from django.contrib.auth import authenticate, login
 from django.http import HttpResponseRedirect
 from django import forms
 from avanzometro.forms import UserRegistrationForm
-from django.template.loader import render_to_string
-from django.http import HttpResponse
 # Create your views here.
 def home(request):
     return render(request, 'main_page.html')
@@ -21,7 +19,7 @@ def register(request):
                 User.objects.create_user(username, email, password)
                 user = authenticate(username = username, password = password)
                 login(request, user)
-                return HttpResponseRedirect('registration/login.html')
+                return HttpResponseRedirect('main_page.html')
             else:
                 raise forms.ValidationError('El usuario ya existe!')
     else:
@@ -32,12 +30,8 @@ def main_page(request):
     template = render_to_string('main_page.html', { 'user': request.user })
     return HttpResponse(template)
 
-def index_page(request):
-    template = render_to_string('form.html', { 'user': request.user })
-    return HttpResponse(template)
-
 def logout_page(request):
     logout(request)
-    return HttpResponseRedirect('main_page.html')
+    return HttpResponseRedirect('main_page.h')
     
 

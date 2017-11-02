@@ -21,10 +21,6 @@ from avanzometro import views as v
 urlpatterns = [
     url(r'^', include('avanzometro.urls')),
     url(r'^admin/', admin.site.urls),
-    #url(r'^$', v.main_page),
-    #url(r'^user/(\w+)/$', user_page),
     url(r'^login/$', auth_views.login, name='login'),
-    #url(r'^index/$', auth_views.form),
-    #url(r'^logout/$', v.logout_page),
-    #url(r'^register/$', v.register_page),
+
 ]
